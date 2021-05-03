@@ -8,7 +8,7 @@ const Footer = () => {
             <div class='container-fluid'>
                 <div class='row'>
                     <div class='media-links'>
-                        <div class='col-sm-2 col-md-1 col-sm-offset-1 col-md-offset-4'>
+                        <div class='col-sm-3 col-md-1 col-sm-offset-5 col-md-offset-4'>
                             <div class='facebook'>
                                 <Href
                                     to='#'
@@ -18,7 +18,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div class='col-sm-2 col-md-1'>
+                        <div class='col-sm-3 col-md-1'>
                             <div class='linkedin'>
                                 <Href
                                     to='#'
@@ -28,7 +28,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div class='col-sm-2 col-md-1'>
+                        <div class='col-sm-3 col-md-1'>
                             <div class='pinterest'>
                                 <Href
                                     to='#'
@@ -38,7 +38,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div class='col-sm-2 col-md-1'>
+                        <div class='col-sm-3 col-md-1'>
                             <div class='email-icon'>
                                 <Href to='#' name='email' type='image'></Href>
                             </div>
