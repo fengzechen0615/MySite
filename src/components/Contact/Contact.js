@@ -12,7 +12,6 @@ const Contact = (props) => {
 
     const orderHandler = (event) => {
         event.preventDefault();
-
         props.onSendContact(lastName, firstName, email, message);
     };
 
