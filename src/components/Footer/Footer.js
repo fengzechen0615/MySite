@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import './Footer.css';
+import Href from '../UI/Href/Href';
 
 const Footer = () => {
     return (
@@ -8,51 +8,39 @@ const Footer = () => {
             <div class='container-fluid'>
                 <div class='row'>
                     <div class='media-links'>
-                        <div class='col-sm-1 col-md-1 col-sm-offset-4 col-md-offset-4'>
+                        <div class='col-sm-2 col-md-1 col-sm-offset-1 col-md-offset-4'>
                             <div class='facebook'>
-                                <a href='#'>
-                                    <img
-                                        class='img-responsive'
-                                        src='./images/facebook.svg'
-                                        alt='facebook'
-                                    ></img>
-                                </a>
+                                <Href
+                                    to='#'
+                                    name='facebook'
+                                    type='image'
+                                ></Href>
                             </div>
                         </div>
 
-                        <div class='col-sm-1 col-md-1'>
+                        <div class='col-sm-2 col-md-1'>
                             <div class='linkedin'>
-                                <a href='#'>
-                                    <img
-                                        class='img-responsive'
-                                        src='./images/linkedin.svg'
-                                        alt='linkedin'
-                                    ></img>
-                                </a>
+                                <Href
+                                    to='#'
+                                    name='linkedin'
+                                    type='image'
+                                ></Href>
                             </div>
                         </div>
 
-                        <div class='col-sm-1 col-md-1'>
+                        <div class='col-sm-2 col-md-1'>
                             <div class='pinterest'>
-                                <a href='#'>
-                                    <img
-                                        class='img-responsive'
-                                        src='./images/pinterest.svg'
-                                        alt='pinterest'
-                                    ></img>
-                                </a>
+                                <Href
+                                    to='#'
+                                    name='pinterest'
+                                    type='image'
+                                ></Href>
                             </div>
                         </div>
 
-                        <div class='col-sm-1 col-md-1'>
+                        <div class='col-sm-2 col-md-1'>
                             <div class='email-icon'>
-                                <a href='#'>
-                                    <img
-                                        class='img-responsive'
-                                        src='./images/email.svg'
-                                        alt='email'
-                                    ></img>
-                                </a>
+                                <Href to='#' name='email' type='image'></Href>
                             </div>
                         </div>
                     </div>
@@ -84,7 +72,7 @@ const Footer = () => {
                     <div class='col-sm-2 col-md-2 text-center'>
                         <div class='home-footer'>
                             <h4>
-                                <a href='#'>Home</a>
+                                <Href to='#' name='Home'></Href>
                             </h4>
                         </div>
                     </div>
@@ -92,20 +80,22 @@ const Footer = () => {
                     <div class='col-sm-2 col-md-2 text-center'>
                         <div class='portfolio-footer'>
                             <h4>
-                                <a href='#'>Portfolio</a>
+                                <Href to='#' name='Portfolio'></Href>
                             </h4>
                             <ul>
                                 <li>
-                                    <a href='#'>Project1</a>
+                                    <Href to='#' name='Project1'></Href>
                                 </li>
                                 <li>
-                                    <a href='#'>Project2</a>
+                                    <Href to='#' name='Project2'></Href>
                                 </li>
                                 <li>
-                                    <a href='#'>Project3</a>
+                                    <Href to='#' name='Project3'></Href>
                                 </li>
                                 <li>
-                                    <a href='#'>See All</a>
+                                    <Href to='#' name='Home'>
+                                        Sell All
+                                    </Href>
                                 </li>
                             </ul>
                         </div>
@@ -114,11 +104,11 @@ const Footer = () => {
                     <div class='col-sm-2 col-md-2 text-center'>
                         <div class='resume-footer'>
                             <h4>
-                                <a href='#'>Resume</a>
+                                <Href to='#' name='Resume'></Href>
                             </h4>
                             <ul>
                                 <li>
-                                    <a href='#'>Download</a>
+                                    <Href to='#' name='Download'></Href>
                                 </li>
                             </ul>
                         </div>
@@ -127,7 +117,7 @@ const Footer = () => {
                     <div class='col-sm-2 col-md-2 text-center'>
                         <div class='contact-footer'>
                             <h4>
-                                <a href='#'>Contact</a>
+                                <Href to='#' name='Contact'></Href>
                             </h4>
                         </div>
                     </div>

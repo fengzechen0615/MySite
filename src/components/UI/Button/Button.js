@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Button = (props) => {
-    const { to, btnType, children } = props;
+    const { to, btnType, clicked, children } = props;
 
     let styleClasses = '';
     if (btnType === 'white') {
@@ -12,7 +12,7 @@ const Button = (props) => {
 
     return (
         <div>
-            <a href={to} className={styleClasses}>
+            <a href={to} className={styleClasses} onClick={clicked}>
                 {children}
             </a>
         </div>

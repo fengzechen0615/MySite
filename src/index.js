@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import createSageMiddlerware from 'redux-saga';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import contactReducer from './store/reducers/contact';
+import { watchContact } from './store/sagas/index';
+
+const rootReducer = combineReducers({ contact: contactReducer });
+
+const sagaMiddleware = createSageMiddlerware();
+
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(watchContact);
 
 ReactDOM.render(
-    <React.StrictMode>
+    <Provider store={store}>
         <App />
-    </React.StrictMode>,
+    </Provider>,
     document.getElementById('root')
 );
 

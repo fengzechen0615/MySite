@@ -12,20 +12,20 @@ const Intro = () => {
                         <h1 id='hello'>Hello, I'm</h1>
                         <h1 id='name'>XXXX</h1>
                         <h1 id='person-description'>
-                            UI Developer. UX Desinger. Problem Solver.
+                            UI Developer. UX Designer. Problem Solver.
                         </h1>
                     </div>
                 </div>
 
                 <div class='row text-center'>
-                    <div class='banner-buttons'>
-                        <div class='col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5'>
+                    <div className='banner-buttons'>
+                        <div className='col-sm-2 col-md-2 col-sm-offset-4 col-md-offset-4'>
                             <Button to={'#about'} btnType='white'>
                                 Info
                             </Button>
                         </div>
 
-                        <div class='col-sm-1 col-md-1'>
+                        <div className='col-sm-2 col-md-2'>
                             <Button to={'#projects'} btnType='white'>
                                 Portfolio
                             </Button>

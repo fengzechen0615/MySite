@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
-// import './Contact.css';
 import Button from '../UI/Button/Button';
+import * as actions from '../../store/actions/index';
 
-const Contact = () => {
+const Contact = (props) => {
+    const [lastName, setLastName] = useState('');
+    const [firstName, setFitstName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const orderHandler = (event) => {
+        event.preventDefault();
+
+        props.onSendContact(lastName, firstName, email, message);
+    };
+
     return (
         <div class='contact'>
             <div class='container-fluid'>
@@ -55,7 +67,7 @@ const Contact = () => {
                                 <div class='row'>
                                     <div class='col-sm-6 col-md-6'>
                                         <div class='firstname'>
-                                            <h4>Full Name *</h4>
+                                            <h4>Last Name *</h4>
                                             <input
                                                 type='text'
                                                 placeholder='First Name'
@@ -65,7 +77,7 @@ const Contact = () => {
 
                                     <div class='col-sm-6 col-md-6'>
                                         <div class='lastname'>
-                                            <h4>Full Name *</h4>
+                                            <h4>First Name *</h4>
                                             <input
                                                 type='text'
                                                 placeholder='Last Name'
@@ -98,7 +110,11 @@ const Contact = () => {
                                 <div class='row'>
                                     <div class='col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4'>
                                         <div class='submit-contact'>
-                                            <Button to={'#'} btnType='white'>
+                                            <Button
+                                                to={'#'}
+                                                btnType='white'
+                                                clicked={orderHandler}
+                                            >
                                                 Submit
                                             </Button>
                                         </div>
@@ -113,4 +129,15 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+const mapStateToProps = (state) => {
+    return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSendContact: (firstName, lastName, email, message) =>
+            dispatch(actions.sendContact(firstName, lastName, email, message)),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);

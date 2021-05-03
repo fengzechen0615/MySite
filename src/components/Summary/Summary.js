@@ -13,6 +13,7 @@ const Summary = () => {
                                 <img
                                     class='img-responsive'
                                     src='./images/developerdesign.svg'
+                                    alt='developerdesign'
                                 />
                             </div>
                         </div>
@@ -36,6 +37,7 @@ const Summary = () => {
                                 <img
                                     class='img-responsive'
                                     src='./images/responsivedesign.svg'
+                                    alt='responsivedesign'
                                 />
                             </div>
                         </div>
@@ -63,6 +65,7 @@ const Summary = () => {
                                 <img
                                     class='img-responsive'
                                     src='./images/innovativesolutions.svg'
+                                    alt='innovativesolutions'
                                 />
                             </div>
                         </div>
@@ -86,6 +89,7 @@ const Summary = () => {
                             <img
                                 class='img-responsive'
                                 src='./images/passion.svg'
+                                alt='passion'
                             />
                         </div>
 
