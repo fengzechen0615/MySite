@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './Intro.css';
+// import './Intro.css';
+import Button from '../UI/Button/Button';
 
 const Intro = () => {
     return (
@@ -19,18 +20,15 @@ const Intro = () => {
                 <div class='row text-center'>
                     <div class='banner-buttons'>
                         <div class='col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5'>
-                            <a class='btn btn-default btn-border' href='#about'>
+                            <Button to={'#about'} btnType='white'>
                                 Info
-                            </a>
+                            </Button>
                         </div>
 
                         <div class='col-sm-1 col-md-1'>
-                            <a
-                                class='btn btn-default btn-border'
-                                href='#projects'
-                            >
+                            <Button to={'#projects'} btnType='white'>
                                 Portfolio
-                            </a>
+                            </Button>
                         </div>
                     </div>
                 </div>

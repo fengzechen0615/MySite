@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './About.css';
+// import './About.css';
+import Button from '../UI/Button/Button';
 
 const About = () => {
     return (
@@ -56,7 +57,6 @@ const About = () => {
                                     </em>
                                 </h5>
                                 <br></br>
-
                                 <p>Male, 200 years old.</p>
                                 <p>Five feet 110 inches</p>
                                 <p>Favorite fonts:Roboto </p>
@@ -69,12 +69,9 @@ const About = () => {
                 <div class='row'>
                     <div class='about-option-buttons'>
                         <div class='col-sm-2 col-md-2'>
-                            <a
-                                href='#contact'
-                                class='btn btn-default btn-black-border'
-                            >
+                            <Button to={'#contact'} btnType='black'>
                                 Contact
-                            </a>
+                            </Button>
                         </div>
                     </div>
                 </div>

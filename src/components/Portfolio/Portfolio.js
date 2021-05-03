@@ -1,8 +1,51 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import $ from 'jquery';
 
-import './Portfolio.css';
+// import './Portfolio.css';
+import Button from '../UI/Button/Button';
 
 const Portfolio = () => {
+    useEffect(() => {
+        function projects() {
+            $('.luvtalk-project').css('height', $('.luvtalk-project').width());
+            $('.luvtalk-project h3').css(
+                'padding-top',
+                ($('.luvtalk-project').height() -
+                    $('.luvtalk-project h3').height() -
+                    $('.luvtalk-project .row').outerHeight()) /
+                    2
+            );
+            $('.personal-website-project').css(
+                'height',
+                $('.personal-website-project').width()
+            );
+            $('.personal-website-project h3').css(
+                'padding-top',
+                ($('.personal-website-project').height() -
+                    $('.personal-website-project h3').height() -
+                    $('.personal-website-project .row').outerHeight()) /
+                    2
+            );
+            $('.strike-zone-project').css(
+                'height',
+                $('.strike-zone-project').width()
+            );
+            $('.strike-zone-project h3').css(
+                'padding-top',
+                ($('.strike-zone-project').height() -
+                    $('.strike-zone-project h3').height() -
+                    $('.strike-zone-project .row').outerHeight()) /
+                    2
+            );
+            var doit;
+            $(window).resize(function () {
+                clearTimeout(doit);
+                doit = setTimeout(projects, 500);
+            });
+        }
+        projects();
+    }, []);
+
     return (
         <div className='projects' id='projects'>
             <div className='container-fluid'>
@@ -34,12 +77,9 @@ const Portfolio = () => {
                             <div className='row'>
                                 <div className='col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4'>
                                     <div className='project-more-info'>
-                                        <a
-                                            className='btn btn-default btn-border'
-                                            href='#'
-                                        >
+                                        <Button to={'#'} btnType='white'>
                                             More
-                                        </a>
+                                        </Button>
                                     </div>
                                 </div>
                             </div>
@@ -58,12 +98,9 @@ const Portfolio = () => {
                             <div className='row'>
                                 <div className='col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4'>
                                     <div className='project-more-info'>
-                                        <a
-                                            className='btn btn-default btn-border'
-                                            href='#'
-                                        >
+                                        <Button to={'#'} btnType='white'>
                                             More
-                                        </a>
+                                        </Button>
                                     </div>
                                 </div>
                             </div>
@@ -82,12 +119,9 @@ const Portfolio = () => {
                             <div className='row'>
                                 <div className='col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4'>
                                     <div className='project-more-info'>
-                                        <a
-                                            className='btn btn-default btn-border'
-                                            href='#'
-                                        >
+                                        <Button to={'#'} btnType='white'>
                                             More
-                                        </a>
+                                        </Button>
                                     </div>
                                 </div>
                             </div>
@@ -98,9 +132,9 @@ const Portfolio = () => {
                 <div className='row'>
                     <div className='col-sm-2 col-md-2 col-sm-offset-5 col-md-offset-5'>
                         <div className='see-more-button'>
-                            <a className='btn btn-default btn-border' href='#'>
+                            <Button to={'#'} btnType='white'>
                                 More Projects
-                            </a>
+                            </Button>
                         </div>
                     </div>
                 </div>

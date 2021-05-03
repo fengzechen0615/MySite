@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import $ from 'jquery';
 
-import './Nav.css';
+// import './Nav.css';
 
 const Nav = () => {
+    useEffect(() => {
+        function navigation() {
+            $('.primary-nav').css('height', $('.logo').height());
+            $('.primary-nav li').css(
+                'margin-top',
+                ($('.primary-nav').height() - $('.primary-nav li').height()) /
+                    2 +
+                    'px'
+            );
+
+            $(window).resize(function () {
+                setTimeout(navigation, 500);
+            });
+        }
+        navigation();
+    }, []);
+
     return (
         <div className='navigation'>
             <div className='container-fluid'>

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './Contact.css';
+// import './Contact.css';
+import Button from '../UI/Button/Button';
 
 const Contact = () => {
     return (
@@ -97,12 +98,9 @@ const Contact = () => {
                                 <div class='row'>
                                     <div class='col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4'>
                                         <div class='submit-contact'>
-                                            <a
-                                                class='btn btn-default btn-border'
-                                                href='/'
-                                            >
+                                            <Button to={'#'} btnType='white'>
                                                 Submit
-                                            </a>
+                                            </Button>
                                         </div>
                                     </div>
                                 </div>
